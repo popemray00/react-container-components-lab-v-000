@@ -11,13 +11,13 @@ class LatestMovieReviewsContainer extends Component {
   state = {
     reviews: []
   }
-  
+
   componentDidMount() {
     fetch(`${URL}`)
     .then( resp => resp.json())
     .then( ({ results }) => this.setState({ reviews: results }))
   }
-  
+
   render() {
     return (<div className="latest-movie-reviews">
               <h2>Latest Movies:</h2>
